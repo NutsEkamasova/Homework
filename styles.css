@@ -1,0 +1,80 @@
+@font-face {
+    font-family: "GalanoGrotesqueAlt-Medium";
+    src: url(fonts/GalanoGrotesqueAlt-Medium.woff) format('woff');
+    font-display: swap;
+}
+
+/* ОБЩИЕ СТИЛИ */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Open Sans';
+}
+.container{
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1, h2, h3, p {
+    margin: 0;
+}
+
+/* DEVELOPMENT */
+.development {
+    background-color: #F9F9FA;
+    padding: 80px 0;
+}
+.development__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.development__subtitle {
+    font-family: 'Open Sans';
+    font-weight: 800;
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    /* Gradients/Pink 100% Text */
+    background: linear-gradient(90deg, #4343FF 0%, #F96D6D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.development__title {
+    font-family: 'GalanoGrotesqueAlt-Medium';
+    font-size: 46px;
+    line-height: 120%;
+    text-align: center;
+    color: #110C11;
+    margin-top: 22px;
+    width: 845px;
+}
+.development__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    margin-top: 80px;
+}
+.development__card{
+    padding: 22px;
+    background: #FFFFFF;
+}
+.development__card-title {
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #110C11;
+    margin: 0;
+}
+.development__card-text {
+    margin-top: 28px;
+    /* Paragraph1 */
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.53;
+    color: #5C5C5C;
+}
