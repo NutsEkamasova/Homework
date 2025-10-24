@@ -1,6 +1,21 @@
 @font-face {
-    font-family: "GalanoGrotesqueAlt-Medium";
-    src: url(fonts/GalanoGrotesqueAlt-Medium.woff) format('woff');
+    font-family: "GalanoGrotesqueAlt-Regular";
+    src: url(fonts/GalanoGrotesqueAlt-Regular.woff) format('woff');
+    font-display: swap;
+}
+@font-face {
+    font-family:"SourceSansPro-Regular";
+    src: url(fonts/SourceSansPro-Regular.woff) format('woff');
+    font-display: swap;
+}
+@font-face {
+    font-family:"SourceSansPro-SemiBold";
+    src: url(fonts/SourceSansPro-SemiBold.woff) format('woff');
+    font-display: swap;
+}
+@font-face {
+    font-family:"SourceSansPro-Bold";
+    src: url(fonts/SourceSansPro-Bold.woff) format('woff');
     font-display: swap;
 }
 
@@ -9,7 +24,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', 'Roboto Condensed', sans-serif;
 }
 .container{
     max-width: 1250px;
@@ -43,7 +58,7 @@ h1, h2, h3, p {
     background-clip: text;
 }
 .development__title {
-    font-family: 'GalanoGrotesqueAlt-Medium';
+    font-family: 'GalanoGrotesqueAlt-Regular';
     font-size: 46px;
     line-height: 120%;
     text-align: center;
@@ -77,4 +92,102 @@ h1, h2, h3, p {
     font-size: 17px;
     line-height: 1.53;
     color: #5C5C5C;
+}
+
+/* UK */
+.uk {
+    padding: 60px 220px 60px 135px;
+}
+.uk .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+.uk__title {
+    font-family: 'Roboto Condensed';
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.06;
+    height: 38px;
+    color: #56565A;
+}
+.uk__descr {
+    font-family: 'SourceSansPro-Regular';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.38;
+    color: #56565A;
+    margin-top: 15px;
+}
+.uk__buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-top: 30px;
+}
+.uk__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 131px;
+    height: 44px;
+    background: #0A467E;
+    outline: none;
+    border: none;
+
+    font-family: 'SourceSansPro-SemiBold';
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.uk__right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+.uk__card {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 22px;
+    width: 270px;
+    height: 196px;
+    background: #F7F7F7;
+    border: 1px solid #EDEDED;
+    border-radius: 5px;
+}
+.uk__divider {
+    width: 170px;
+    border: 1px solid #E5E5E5;
+    margin-top: 15px;
+}
+.uk__card--big {
+    height: 402px;
+    grid-row: span 2;
+}
+.uk__icon {
+    height: 30px;
+    width: 30px;
+}
+.uk__subtitle {
+    font-family: 'SourceSansPro-Bold';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.22;
+    text-align: center;
+    color: #56565A;
+    margin-top: 10px;
+}
+.uk__text {
+    font-family: 'SourceSansPro-Regular';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.36;
+    text-align: center;
+    color: #56565A;
+    margin-top: 15px;
 }
