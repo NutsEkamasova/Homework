@@ -64,7 +64,7 @@ h1, h2, h3, p {
     text-align: center;
     color: #110C11;
     margin-top: 22px;
-    width: 845px;
+    max-width: 845px;
 }
 .development__wrapper {
     display: grid;
@@ -109,7 +109,6 @@ h1, h2, h3, p {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.06;
-    height: 38px;
     color: #56565A;
 }
 .uk__descr {
@@ -142,7 +141,7 @@ h1, h2, h3, p {
     text-align: center;
     color: #FFFFFF;
 }
-.uk__right {
+.uk__wrapper1 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
@@ -154,16 +153,10 @@ h1, h2, h3, p {
     justify-content: center;
     align-items: center;
     padding: 22px;
-    width: 270px;
-    height: 196px;
+    max-width: 270px;
     background: #F7F7F7;
     border: 1px solid #EDEDED;
     border-radius: 5px;
-}
-.uk__divider {
-    width: 170px;
-    border: 1px solid #E5E5E5;
-    margin-top: 15px;
 }
 .uk__card--big {
     height: 402px;
@@ -174,6 +167,7 @@ h1, h2, h3, p {
     width: 30px;
 }
 .uk__subtitle {
+    position: relative;
     font-family: 'SourceSansPro-Bold';
     font-weight: 700;
     font-size: 18px;
@@ -181,6 +175,17 @@ h1, h2, h3, p {
     text-align: center;
     color: #56565A;
     margin-top: 10px;
+    padding-bottom: 10px;
+}
+.uk__subtitle::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80%;        /* длина линии относительно заголовка */
+    height: 1px;
+    background-color: #E5E5E5;
 }
 .uk__text {
     font-family: 'SourceSansPro-Regular';
@@ -190,4 +195,71 @@ h1, h2, h3, p {
     text-align: center;
     color: #56565A;
     margin-top: 15px;
+}
+
+@media (max-width: 1200px) {
+.uk {
+    padding: 60px 80px;
+}
+.uk__title {
+    font-size: 34px;
+}
+}
+@media (max-width: 900px) {
+    .uk {
+        padding: 50px 30px;
+    }
+    .development__wrapper {
+        margin-top: 60px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    .development__title {
+        font-size: 36px;
+        max-width: 700px;
+    }
+    .development__card-text {
+        margin-top: 12px;
+    }
+    .uk .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .uk__wrapper1 {
+        justify-items: center;
+    }
+    .uk__buttons {
+        justify-content: center;
+    }
+   
+}
+@media (max-width: 600px) {
+    .development {
+        padding: 60px 0;
+    }
+    .development__title {
+        font-size: 26px;
+        max-width: 500px;
+    }
+    .development__card {
+        text-align: center;
+    }
+    .development__wrapper {
+        grid-template-columns: 1fr;
+        margin-top: 40px;
+    }
+    .development__card-text {
+        font-size: 15px;
+    }
+    .uk__wrapper1 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .uk__title {
+        font-size: 30px;
+    }
+    .uk__card {
+        width: 100%;
+    }
+    
 }
